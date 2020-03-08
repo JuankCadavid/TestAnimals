@@ -1,0 +1,44 @@
+<!-- <div *ngFor="let animal of animals">
+  <li>{{animal.firstName}}</li>
+</div> -->
+
+<div class="container p-2">
+  <div class="sticky">
+    <div class="row">
+      <div class="col-md-9">
+        <h2>Mis Productos </h2>
+      </div>
+      <div class="col-md-3">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"
+          >
+        </form>
+      </div>
+    </div>
+
+    <hr>
+  </div>
+  <div class="row">
+    <div class="col-md-3" *ngFor="let animal of animals">
+
+      <div class="card text-center" style="border: 0cm">
+
+        <div class="card-body" style="border: 0cm">
+          <div class="card-header d-flex justify-content-between align-items-center"
+            style="border: 0cm;background-color: white">
+            <button class="btn btn-danger">
+              <i class="far fa-trash-alt"></i>
+            </button>
+          </div>
+          <h6>{{animal.firstName}}</h6>
+          <p> <strong>{{animal.name}}</strong></p>
+          <!-- <a [routerLink]="['/products/edit',animal.id]" class="btn btn-info "> Edit Product</a> -->
+        </div>
+
+      </div>
+
+      <br>
+
+    </div>
+  </div>
+</div>
